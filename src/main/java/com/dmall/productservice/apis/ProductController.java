@@ -29,6 +29,11 @@ public class ProductController {
         this.productAssembler = productAssembler;
     }
 
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello";
+    }
+    
     @GetMapping
     @ApiOperation("Get all products")
     public List<ProductResponse> getAllProducts() {
